@@ -78,7 +78,7 @@ ccb.parseParamter = function (type, obj) {
         var b = obj.value[2];
         var isDefault = r == "255" && g == "255" && b == "255";
         template = "cc.c3b({value1},{value2},{value3})".replace("{value1}", r).replace("{value2}", g).replace("{value3}", b);
-        return {"param": template, r: r, g: g, b: b, isDefault: isDefault};
+        return {"value": template, r: r, g: g, b: b, isDefault: isDefault};
     }
     else {
         return {"param": "false"};
@@ -247,17 +247,7 @@ ccb.parser.backgroundSpriteFrame.codeBlock = function (obj, param) {
 }
 
 
-ccb.parser.titleColor = {};
-ccb.parser.titleColor.param = function (obj) {
-    return ccb.parseParamter(obj.type, obj);
-}
-ccb.parser.titleColor.codeBlock = function (obj, param) {
-    var template = "";
-    if (!param.isDefault) {
-        template = "{varName}.setTitleColorForState({param},{state});";
-    }
-    return template;
-}
+
 
 
 ccb.parser.__base = {};
@@ -282,6 +272,8 @@ ccb.parser.__base.codeBlock = function (obj, param,state) {
 
 ccb.parser.titleTTF = ccb.parser.__base;
 ccb.parser.fontName = ccb.parser.__base;
+ccb.parser.titleColor = ccb.parser.__base;
+ccb.parser.color = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
