@@ -3,15 +3,16 @@ ccb.parser = {};
 
 ccb.tempVariableCount = 1;
 
-ccb.parseNode = function (obj,parent) {
+ccb.parseNode = function (obj, parent) {
+
     var memberVarAssignmentName = obj.memberVarAssignmentName;
-    if (memberVarAssignmentName == ""){
+    if (memberVarAssignmentName == "") {
         memberVarAssignmentName = "temp" + ccb.tempVariableCount.toString();
         ccb.tempVariableCount++;
     }
     var memberVarAssignmentType = obj.memberVarAssignmentType;
     var baseClass = "cc." + obj.baseClass.split("CC")[1];
-    var template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}",baseClass);
+    var template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}", baseClass);
     obj.properties.forEach(function (property) {
         var line = ccb.parseProerties(property);
         line = line == "" ? "" : line + "\n";
@@ -19,11 +20,11 @@ ccb.parseNode = function (obj,parent) {
     })
     template = template.replace(/{varName}/gi, memberVarAssignmentName);
 
-    if (parent != null){
+    if (parent != null) {
         template += parent + ".addChild(" + memberVarAssignmentName + ");\n";
     }
-    obj.children.forEach(function(childObj){
-        template += "\n" + ccb.parseNode(childObj,memberVarAssignmentName);
+    obj.children.forEach(function (childObj) {
+        template += "\n" + ccb.parseNode(childObj, memberVarAssignmentName);
     });
     return template;
 }
@@ -37,7 +38,7 @@ ccb.parseProerties = function (obj) {
     var parser = ccb.parser[name];
     if (parser != null) {
         param = parser.param(obj);
-        template = parser.codeBlock(obj, param,objState);
+        template = parser.codeBlock(obj, param, objState);
     }
     else {
         template = "//ignore:" + obj.name;
@@ -58,8 +59,8 @@ ccb.parseParamter = function (type, obj) {
     if (type == "CCPoint") {
         var x = 0;
         var y = 0;
-        if (obj.value.length == 0){
-            return {"isDefault":true};
+        if (obj.value.length == 0) {
+            return {"isDefault": true};
         }
         else if (obj.value.length == 1) {
             y = obj.value[0];
@@ -89,14 +90,14 @@ ccb.parseParamter = function (type, obj) {
     else if (type == "FontTTF") {
         return {value: "\"" + obj.value + "\"", isDefault: false};
     }
-    else if (type == "FloatScale"){
-        return {value:obj.value[0]};
+    else if (type == "FloatScale") {
+        return {value: obj.value[0]};
     }
-    else if (type == "IntegerLabeled"){
-        return {value:obj.value};
+    else if (type == "IntegerLabeled") {
+        return {value: obj.value};
     }
-    else if (type == "SpriteFrame"){
-        return {value:"\"" + obj.value[0] + "\""};
+    else if (type == "SpriteFrame") {
+        return {value: "\"" + obj.value[0] + "\""};
     }
     else if (type == "int") {
         return {value: obj.value};
@@ -109,8 +110,8 @@ ccb.parseParamter = function (type, obj) {
         template = "cc.c3b({value1},{value2},{value3})".replace("{value1}", r).replace("{value2}", g).replace("{value3}", b);
         return {"value": template, r: r, g: g, b: b, isDefault: isDefault};
     }
-    else if (type == "Check"){
-        return {value:obj.value};
+    else if (type == "Check") {
+        return {value: obj.value};
     }
     else {
         return {"param": "false"};
@@ -280,23 +281,19 @@ ccb.parser.backgroundSpriteFrame.codeBlock = function (obj, param) {
 }
 
 
-
-
-
 ccb.parser.__base = {};
 ccb.parser.__base.param = function (obj) {
     return ccb.parseParamter(obj.type, obj);
 }
-ccb.parser.__base.codeBlock = function (obj, param,state) {
+ccb.parser.__base.codeBlock = function (obj, param, state) {
     var template = "";
     if (!param.isDefault) {
         var functionName = "set" + obj.name.charAt(0).toUpperCase() + obj.name.substr(1, obj.name.length);
-        if (state != null){
+        if (state != null) {
             functionName += "ForState";
             template = "{varName}." + functionName + "({value},{state});";
         }
-        else
-        {
+        else {
             template = "{varName}." + functionName + "({value});";
         }
     }
@@ -315,6 +312,18 @@ ccb.parser.dimensions = ccb.parser.__base;
 ccb.parser.contentSize = ccb.parser.__base;
 ccb.parser.displayFrame = ccb.parser.__base;
 ccb.parser.touchEnabled = ccb.parser.__base;
+ccb.parser.ccControl = {};
+ccb.parser.ccControl.param = function (obj) {
+    var target = "host";
+    var selector = "host." + obj.value[0];
+    var type = obj.value[2];
+    return {value: target + "," + selector + "," + type};
+}
+ccb.parser.ccControl.codeBlock = function (obj, param, state) {
+    var functionName = "addTargetWithActionForControlEvents";
+    var template = "host." + functionName + "({value});";
+    return template;
+}
 
 
 exports.parseNode = ccb.parseNode;

@@ -15,18 +15,15 @@ var file = fs.readFileSync('./SelectHeroItemLayer.ccb', "utf8");
 var plist = require('plist');
 var plist = plist.parseFileSync('SelectHeroItemLayer.ccb');
 
-
-
-
-
-var child = plist.nodeGraph;
-console.log(child);
-
-var baseClass = child.baseClass;
-
 var ccbparser = require("./ccbparser");
-var result = ccbparser.parseNode(child);
 
+var child = plist.nodeGraph;//.children[0];
+var result = ccbparser.parseNode(child);
+//var baseClass = child.baseClass;
+
+
+
+console.log(child.properties);
 console.log(result);
 
 
