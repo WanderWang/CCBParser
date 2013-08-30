@@ -1,17 +1,31 @@
 var ccb = {};
 ccb.parser = {};
 
+ccb.tempVariableCount = 1;
 
-ccb.parseNode = function (obj) {
+ccb.parseNode = function (obj,parent) {
     var memberVarAssignmentName = obj.memberVarAssignmentName;
+    if (memberVarAssignmentName == ""){
+        memberVarAssignmentName = "temp" + ccb.tempVariableCount.toString();
+        ccb.tempVariableCount++;
+    }
     var memberVarAssignmentType = obj.memberVarAssignmentType;
-    var template = "var {varName} = cc.ControlButton.create();\n";
+    var baseClass = "cc." + obj.baseClass.split("CC")[1];
+    var template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}",baseClass);
     obj.properties.forEach(function (property) {
         var line = ccb.parseProerties(property);
         line = line == "" ? "" : line + "\n";
         template += line;
     })
-    return template.replace(/{varName}/gi, memberVarAssignmentName);
+    template = template.replace(/{varName}/gi, memberVarAssignmentName);
+
+    if (parent != null){
+        template += parent + ".addChild(" + memberVarAssignmentName + ");\n";
+    }
+    obj.children.forEach(function(childObj){
+        template += "\n" + ccb.parseNode(childObj,memberVarAssignmentName);
+    });
+    return template;
 }
 
 ccb.parseProerties = function (obj) {
@@ -95,6 +109,9 @@ ccb.parseParamter = function (type, obj) {
         template = "cc.c3b({value1},{value2},{value3})".replace("{value1}", r).replace("{value2}", g).replace("{value3}", b);
         return {"value": template, r: r, g: g, b: b, isDefault: isDefault};
     }
+    else if (type == "Check"){
+        return {value:obj.value};
+    }
     else {
         return {"param": "false"};
     }
@@ -124,7 +141,7 @@ ccb.parser.ignoreAnchorPointForPosition.param = function (obj) {
 }
 ccb.parser.ignoreAnchorPointForPosition.codeBlock = function (obj, param) {
     var template = "";
-    if (param.Boolean != false) {
+    if (param.value != false) {
         template = "{varName}.ignoreAnchorPointForPosition = {value};";
     }
     return template;
@@ -295,7 +312,9 @@ ccb.parser.string = ccb.parser.__base;
 ccb.parser.horizontalAlignment = ccb.parser.__base;
 ccb.parser.verticalAlignment = ccb.parser.__base;
 ccb.parser.dimensions = ccb.parser.__base;
+ccb.parser.contentSize = ccb.parser.__base;
 ccb.parser.displayFrame = ccb.parser.__base;
+ccb.parser.touchEnabled = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
