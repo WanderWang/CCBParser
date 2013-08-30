@@ -62,11 +62,14 @@ ccb.parseParamter = function (type, obj) {
     else if (type == "Boolean") {
         return {value: obj.value};
     }
-    else if (type == "String") {
+    else if (type == "String" || type == "Text") {
         return {value: "\"" + obj.value + "\""};
     }
     else if (type == "FontTTF") {
         return {value: "\"" + obj.value + "\"", isDefault: false};
+    }
+    else if (type == "FloatScale"){
+        return {value:obj.value[0]};
     }
 
     else if (type == "int") {
@@ -274,6 +277,8 @@ ccb.parser.titleTTF = ccb.parser.__base;
 ccb.parser.fontName = ccb.parser.__base;
 ccb.parser.titleColor = ccb.parser.__base;
 ccb.parser.color = ccb.parser.__base;
+ccb.parser.fontSize = ccb.parser.__base;
+ccb.parser.string = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
