@@ -19,6 +19,7 @@ ccb.parseProerties = function (obj) {
     var param = {};
     var name = obj.name.split("|")[0];
     var objState = obj.name.split("|")[1];
+    obj.name = name;
     var parser = ccb.parser[name];
     if (parser != null) {
         param = parser.param(obj);
@@ -33,15 +34,27 @@ ccb.parseProerties = function (obj) {
         var value = param[key];
         template = template.replace("{" + key + "}", value);
     }
-    template = template.replace("{state}", ccb.parseState(objState));
+    var state =  ccb.parseState(objState);
+    if(state != "") state = "," + state;
+    template = template.replace(",{state}",state);
     return template;
 }
 
 ccb.parseParamter = function (type, obj) {
     var template = "";
     if (type == "CCPoint") {
-        template = "cc.p({value1},{value2})".replace("{value1}", obj.value[0]).replace("{value2}", obj.value[1]);
-        return {"param": template, "x": obj.value[0], "y": obj.value[1]};
+        var x = 0;
+        var y = 0;
+        if (obj.value.length == 1) {
+            y = obj.value[0];
+        }
+        else {
+            x = obj.value[0];
+            y = obj.value[1];
+        }
+
+        template = "cc.p({value1},{value2})".replace("{value1}", x).replace("{value2}", y);
+        return {"param": template, "x": x, "y": y};
     }
     else if (type == "CCSize") {
         template = "cc.size({value1},{value2})".replace("{value1}", obj.value[0]).replace("{value2}", obj.value[1]);
@@ -53,6 +66,10 @@ ccb.parseParamter = function (type, obj) {
     else if (type == "String") {
         return {value: "\"" + obj.value + "\""};
     }
+    else if (type == "FontTTF") {
+        return {value: "\"" + obj.value + "\"",isDefault:false};
+    }
+
     else if (type == "int") {
         return {value: obj.value};
     }
@@ -160,17 +177,7 @@ ccb.parser.title.codeBlock = function (obj, param) {
     return template;
 }
 
-ccb.parser.titleTTF = {};
-ccb.parser.titleTTF.param = function (obj) {
-    return ccb.parseParamter("String", obj);
-}
-ccb.parser.titleTTF.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.Boolean != true) {
-        template = "{varName}.setTitleTTFForState({value}, cc.CONTROL_STATE_NORMAL);";
-    }
-    return template;
-}
+
 
 
 ccb.parser.titleTTFSize = {};
@@ -250,6 +257,23 @@ ccb.parser.titleColor.codeBlock = function (obj, param) {
     }
     return template;
 }
+
+
+ccb.parser.__base = {};
+ccb.parser.__base.param = function (obj) {
+    return ccb.parseParamter(obj.type, obj);
+}
+ccb.parser.__base.codeBlock = function (obj, param) {
+    var template = "";
+    if (!param.isDefault) {
+        var functionName = "set" + obj.name.charAt(0).toUpperCase() + obj.name.substr(1,obj.name.length);
+        template = "{varName}." + functionName + "({value},{state});";
+    }
+    return template;
+}
+
+ccb.parser.titleTTF = ccb.parser.__base;
+ccb.parser.fontName = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
