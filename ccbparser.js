@@ -44,7 +44,10 @@ ccb.parseParamter = function (type, obj) {
     if (type == "CCPoint") {
         var x = 0;
         var y = 0;
-        if (obj.value.length == 1) {
+        if (obj.value.length == 0){
+            return {"isDefault":true};
+        }
+        else if (obj.value.length == 1) {
             y = obj.value[0];
         }
         else {
@@ -55,9 +58,13 @@ ccb.parseParamter = function (type, obj) {
         template = "cc.p({value1},{value2})".replace("{value1}", x).replace("{value2}", y);
         return {"param": template, "x": x, "y": y};
     }
-    else if (type == "CCSize") {
-        template = "cc.size({value1},{value2})".replace("{value1}", obj.value[0]).replace("{value2}", obj.value[1]);
-        return {"param": template, "width": obj.value[0], "height": obj.value[1]};
+    else if (type == "Size") {
+        var w = parseInt(obj.value[0]);
+        var h = parseInt(obj.value[1]);
+        w = isNaN(w) ? 0 : w;
+        h = isNaN(h) ? 0 : h;
+        template = "cc.size({value1},{value2})".replace("{value1}", w).replace("{value2}", h);
+        return {"value": template, "width": w, "height": h};
     }
     else if (type == "Boolean") {
         return {value: obj.value};
@@ -70,6 +77,9 @@ ccb.parseParamter = function (type, obj) {
     }
     else if (type == "FloatScale"){
         return {value:obj.value[0]};
+    }
+    else if (type == "IntegerLabeled"){
+        return {value:obj.value};
     }
 
     else if (type == "int") {
@@ -138,6 +148,7 @@ ccb.parser.anchorPoint.param = function (obj) {
 }
 ccb.parser.anchorPoint.codeBlock = function (obj, param) {
     var template = "";
+    if (param.isDefault) return "";
     if (param.x != 0.5 || param.y != 0.5) {
         template = "{varName}.setAnchorPoint({param});";
     }
@@ -212,12 +223,12 @@ ccb.parser.labelAnchorPoint.codeBlock = function (obj, param) {
 
 ccb.parser.preferedSize = {};
 ccb.parser.preferedSize.param = function (obj) {
-    return ccb.parseParamter("CCSize", obj);
+    return ccb.parseParamter("Size", obj);
 }
 ccb.parser.preferedSize.codeBlock = function (obj, param) {
     var template = "";
     if (param.x != 0.5 || param.y != 0.5) {
-        template = "{varName}.setPreferedSize({param});";
+        template = "{varName}.setPreferedSize({value});";
     }
     return template;
 }
@@ -279,6 +290,9 @@ ccb.parser.titleColor = ccb.parser.__base;
 ccb.parser.color = ccb.parser.__base;
 ccb.parser.fontSize = ccb.parser.__base;
 ccb.parser.string = ccb.parser.__base;
+ccb.parser.horizontalAlignment = ccb.parser.__base;
+ccb.parser.verticalAlignment = ccb.parser.__base;
+ccb.parser.dimensions = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
