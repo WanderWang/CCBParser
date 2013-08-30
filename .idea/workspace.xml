@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377869590895" ignored="false" />
     <file path="/xmlreader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377770522529" ignored="false" />
-    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377869853658" ignored="false" />
+    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377870261698" ignored="false" />
     <file path="/a.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841844926" ignored="false" />
     <file path="/a.coffee" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841786238" ignored="false" />
     <file path="/a.dummy" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377846767937" ignored="false" />
@@ -34,7 +34,7 @@
       <file leaf-file-name="Main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="38" selection-start="384" selection-end="384" vertical-scroll-proportion="0.33834586">
+            <state line="21" column="39" selection-start="385" selection-end="385" vertical-scroll-proportion="0.33834586">
               <folding>
                 <element signature="e#0#156#0" expanded="false" />
               </folding>
@@ -45,7 +45,7 @@
       <file leaf-file-name="ccbparser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ccbparser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="0" selection-start="4461" selection-end="4484" vertical-scroll-proportion="-20.52">
+            <state line="84" column="29" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-16.0">
               <folding />
             </state>
           </provider>
@@ -360,14 +360,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ccbparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="0" selection-start="4461" selection-end="4484" vertical-scroll-proportion="-20.52">
+        <state line="84" column="29" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-16.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="384" selection-end="384" vertical-scroll-proportion="0.33834586">
+        <state line="21" column="39" selection-start="385" selection-end="385" vertical-scroll-proportion="0.33834586">
           <folding>
             <element signature="e#0#156#0" expanded="false" />
           </folding>

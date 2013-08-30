@@ -19,7 +19,7 @@ var plist = plist.parseFileSync('SelectHeroItemLayer.ccb');
 
 
 
-var child = plist.nodeGraph.children[4];
+var child = plist.nodeGraph.children[10];
 console.log(child.properties);
 
 var baseClass = child.baseClass;

@@ -81,7 +81,9 @@ ccb.parseParamter = function (type, obj) {
     else if (type == "IntegerLabeled"){
         return {value:obj.value};
     }
-
+    else if (type == "SpriteFrame"){
+        return {value:"\"" + obj.value[0] + "\""};
+    }
     else if (type == "int") {
         return {value: obj.value};
     }
@@ -293,6 +295,7 @@ ccb.parser.string = ccb.parser.__base;
 ccb.parser.horizontalAlignment = ccb.parser.__base;
 ccb.parser.verticalAlignment = ccb.parser.__base;
 ccb.parser.dimensions = ccb.parser.__base;
+ccb.parser.displayFrame = ccb.parser.__base;
 
 
 exports.parseNode = ccb.parseNode;
