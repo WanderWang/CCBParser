@@ -23,7 +23,7 @@ ccb.parseProerties = function (obj) {
     var parser = ccb.parser[name];
     if (parser != null) {
         param = parser.param(obj);
-        template = parser.codeBlock(obj, param);
+        template = parser.codeBlock(obj, param,objState);
     }
     else {
         template = "//ignore:" + obj.name;
@@ -34,9 +34,8 @@ ccb.parseProerties = function (obj) {
         var value = param[key];
         template = template.replace("{" + key + "}", value);
     }
-    var state =  ccb.parseState(objState);
-    if(state != "") state = "," + state;
-    template = template.replace(",{state}",state);
+    var state = ccb.parseState(objState);
+    template = template.replace("{state}", state);
     return template;
 }
 
@@ -67,15 +66,19 @@ ccb.parseParamter = function (type, obj) {
         return {value: "\"" + obj.value + "\""};
     }
     else if (type == "FontTTF") {
-        return {value: "\"" + obj.value + "\"",isDefault:false};
+        return {value: "\"" + obj.value + "\"", isDefault: false};
     }
 
     else if (type == "int") {
         return {value: obj.value};
     }
-    else if (type == "Color") {
-        template = "cc.c3b({value1},{value2},{value3})".replace("{value1}", obj.value[0]).replace("{value2}", obj.value[1]).replace("{value3}", obj.value[2]);
-        return {"param": template, r: obj.value[0], g: obj.value[1], b: obj.value[2]};
+    else if (type == "Color3") {
+        var r = obj.value[0];
+        var g = obj.value[1];
+        var b = obj.value[2];
+        var isDefault = r == "255" && g == "255" && b == "255";
+        template = "cc.c3b({value1},{value2},{value3})".replace("{value1}", r).replace("{value2}", g).replace("{value3}", b);
+        return {"param": template, r: r, g: g, b: b, isDefault: isDefault};
     }
     else {
         return {"param": "false"};
@@ -178,8 +181,6 @@ ccb.parser.title.codeBlock = function (obj, param) {
 }
 
 
-
-
 ccb.parser.titleTTFSize = {};
 ccb.parser.titleTTFSize.param = function (obj) {
     return ccb.parseParamter("int", obj);
@@ -248,11 +249,11 @@ ccb.parser.backgroundSpriteFrame.codeBlock = function (obj, param) {
 
 ccb.parser.titleColor = {};
 ccb.parser.titleColor.param = function (obj) {
-    return ccb.parseParamter("Color", obj);
+    return ccb.parseParamter(obj.type, obj);
 }
 ccb.parser.titleColor.codeBlock = function (obj, param) {
     var template = "";
-    if (param.r != "255" && param.g != "255" && param.b != "255") {
+    if (!param.isDefault) {
         template = "{varName}.setTitleColorForState({param},{state});";
     }
     return template;
@@ -263,11 +264,18 @@ ccb.parser.__base = {};
 ccb.parser.__base.param = function (obj) {
     return ccb.parseParamter(obj.type, obj);
 }
-ccb.parser.__base.codeBlock = function (obj, param) {
+ccb.parser.__base.codeBlock = function (obj, param,state) {
     var template = "";
     if (!param.isDefault) {
-        var functionName = "set" + obj.name.charAt(0).toUpperCase() + obj.name.substr(1,obj.name.length);
-        template = "{varName}." + functionName + "({value},{state});";
+        var functionName = "set" + obj.name.charAt(0).toUpperCase() + obj.name.substr(1, obj.name.length);
+        if (state != null){
+            functionName += "ForState";
+            template = "{varName}." + functionName + "({value},{state});";
+        }
+        else
+        {
+            template = "{varName}." + functionName + "({value});";
+        }
     }
     return template;
 }

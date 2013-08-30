@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377846194534" ignored="false" />
     <file path="/xmlreader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377770522529" ignored="false" />
-    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377847615837" ignored="false" />
+    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377848445618" ignored="false" />
     <file path="/a.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841844926" ignored="false" />
     <file path="/a.coffee" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841786238" ignored="false" />
     <file path="/a.dummy" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377846767937" ignored="false" />
@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="21" column="40" selection-start="386" selection-end="386" vertical-scroll-proportion="0.33834586">
               <folding>
                 <element signature="e#0#156#0" expanded="false" />
               </folding>
@@ -42,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ccbparser.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ccbparser.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ccbparser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="24" selection-start="7519" selection-end="7519" vertical-scroll-proportion="0.654908">
+            <state line="280" column="1" selection-start="7822" selection-end="7822" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,8 +62,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/node_modules/xmlreader/xmlreader.js" />
-        <option value="$PROJECT_DIR$/Main.js" />
         <option value="$PROJECT_DIR$/ccbparser.js" />
+        <option value="$PROJECT_DIR$/Main.js" />
       </list>
     </option>
   </component>
@@ -350,19 +350,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.js">
+    <entry file="file://$PROJECT_DIR$/ccbparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#156#0" expanded="false" />
-          </folding>
+        <state line="280" column="1" selection-start="7822" selection-end="7822" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ccbparser.js">
+    <entry file="file://$PROJECT_DIR$/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="24" selection-start="7519" selection-end="7519" vertical-scroll-proportion="0.654908">
-          <folding />
+        <state line="21" column="40" selection-start="386" selection-end="386" vertical-scroll-proportion="0.33834586">
+          <folding>
+            <element signature="e#0#156#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
