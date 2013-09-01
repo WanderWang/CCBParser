@@ -21,7 +21,7 @@ var template = "var " + jsController + " = cc.Layer.extend({\n" +
 //var baseClass = child.baseClass;
 
 
-//console.log(child);
+//console.log(plist.sequences);
 console.log(template);
 
 
