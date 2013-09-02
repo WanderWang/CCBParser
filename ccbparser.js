@@ -1,18 +1,31 @@
 var ccb = {};
 ccb.parser = {};
 
-ccb.tempVariableCount = 1;
+ccb.tempVariableCount = 0;
 
 ccb.parseNode = function (obj, parent) {
 
+    var template = "";
     var memberVarAssignmentName = obj.memberVarAssignmentName;
+    var baseClass = "cc." + obj.baseClass.split("CC")[1];
     if (memberVarAssignmentName == "") {
-        memberVarAssignmentName = "temp" + ccb.tempVariableCount.toString();
+        if (ccb.tempVariableCount == 0){
+            memberVarAssignmentName = "root";
+//            template = "this._super();\n";
+        }
+        else
+        {
+            memberVarAssignmentName = "temp" + ccb.tempVariableCount.toString();
+            template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}", baseClass);
+        }
         ccb.tempVariableCount++;
     }
+    else
+    {
+        template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}", baseClass);
+        template += "host.{varName} = {varName};\n";
+    }
     var memberVarAssignmentType = obj.memberVarAssignmentType;
-    var baseClass = "cc." + obj.baseClass.split("CC")[1];
-    var template = "var {varName} = {baseClass}.create();\n".replace("{baseClass}", baseClass);
     obj.properties.forEach(function (property) {
         var line = ccb.parseProerties(property);
         line = line == "" ? "" : line + "\n";
@@ -97,7 +110,8 @@ ccb.parseParamter = function (type, obj) {
         return {value: obj.value};
     }
     else if (type == "SpriteFrame") {
-        return {value: "\"" + obj.value[0] + "\""};
+        template = "game.createSpriteFrame(\"{value}\")".replace("{value}",obj.value[0]);
+        return {value: template};
     }
     else if (type == "int") {
         return {value: obj.value};
@@ -143,7 +157,7 @@ ccb.parser.ignoreAnchorPointForPosition.param = function (obj) {
 ccb.parser.ignoreAnchorPointForPosition.codeBlock = function (obj, param) {
     var template = "";
     if (param.value != false) {
-        template = "{varName}.ignoreAnchorPointForPosition = {value};";
+        template = "{varName}.ignoreAnchorPointForPosition({value});";
     }
     return template;
 }
@@ -189,97 +203,14 @@ ccb.parser.scale.codeBlock = function (obj, param) {
 }
 
 
-ccb.parser.enabled = {};
-ccb.parser.enabled.param = function (obj) {
-    return ccb.parseParamter("Boolean", obj);
-}
-ccb.parser.enabled.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.Boolean != true) {
-        template = "{varName}.setEnabled({value});";
-    }
-    return template;
-}
-
-
-ccb.parser.title = {};
-ccb.parser.title.param = function (obj) {
-    return ccb.parseParamter("String", obj);
-}
-ccb.parser.title.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.Boolean != true) {
-        template = "{varName}.setTitleForState({value}, cc.CONTROL_STATE_NORMAL);";
-    }
-    return template;
-}
-
-
-ccb.parser.titleTTFSize = {};
-ccb.parser.titleTTFSize.param = function (obj) {
-    return ccb.parseParamter("int", obj);
-}
-ccb.parser.titleTTFSize.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.Boolean != true) {
-        template = "{varName}.setTitleTTFSizeForState({value}, cc.CONTROL_STATE_NORMAL);";
-    }
-    return template;
-}
-
-
-ccb.parser.labelAnchorPoint = {};
-ccb.parser.labelAnchorPoint.param = function (obj) {
-    return ccb.parseParamter("CCPoint", obj);
-}
-ccb.parser.labelAnchorPoint.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.x != 0.5 || param.y != 0.5) {
-        template = "{varName}.setLabelAnchorPoint({param});";
-    }
-    return template;
-}
-
-
 ccb.parser.preferedSize = {};
 ccb.parser.preferedSize.param = function (obj) {
     return ccb.parseParamter("Size", obj);
 }
 ccb.parser.preferedSize.codeBlock = function (obj, param) {
-    var template = "";
-    if (param.x != 0.5 || param.y != 0.5) {
-        template = "{varName}.setPreferedSize({value});";
-    }
+    var template = "{varName}.setPreferredSize({value});";
     return template;
 }
-
-
-ccb.parser.zoomOnTouchDown = {};
-ccb.parser.zoomOnTouchDown.param = function (obj) {
-    return ccb.parseParamter("Boolean", obj);
-}
-ccb.parser.zoomOnTouchDown.codeBlock = function (obj, param) {
-    var template = "";
-    if (true) {//aram.x != 0.5 || param.y != 0.5) {
-        template = "{varName}.setZoomOnTouchDown({value});";
-    }
-    return template;
-}
-
-ccb.parser.backgroundSpriteFrame = {};
-ccb.parser.backgroundSpriteFrame.param = function (obj) {
-    return ccb.parseParamter("String", obj);
-}
-ccb.parser.backgroundSpriteFrame.codeBlock = function (obj, param) {
-
-
-    var template = "";
-    if (true) {//aram.x != 0.5 || param.y != 0.5) {
-        template = "{varName}.setBackgroundSpriteFrameForState({value},{state});";
-    }
-    return template;
-}
-
 
 ccb.parser.__base = {};
 ccb.parser.__base.param = function (obj) {
@@ -311,7 +242,16 @@ ccb.parser.verticalAlignment = ccb.parser.__base;
 ccb.parser.dimensions = ccb.parser.__base;
 ccb.parser.contentSize = ccb.parser.__base;
 ccb.parser.displayFrame = ccb.parser.__base;
+ccb.parser.spriteFrame = ccb.parser.__base;
 ccb.parser.touchEnabled = ccb.parser.__base;
+ccb.parser.backgroundSpriteFrame = ccb.parser.__base;
+ccb.parser.visible = ccb.parser.__base;
+ccb.parser.zoomOnTouchDown = ccb.parser.__base;
+ccb.parser.title = ccb.parser.__base;
+ccb.parser.enabled = ccb.parser.__base;
+ccb.parser.titleTTFSize = ccb.parser.__base;
+ccb.parser.labelAnchorPoint = ccb.parser.__base;
+
 ccb.parser.ccControl = {};
 ccb.parser.ccControl.param = function (obj) {
     var target = "host";
@@ -321,7 +261,7 @@ ccb.parser.ccControl.param = function (obj) {
 }
 ccb.parser.ccControl.codeBlock = function (obj, param, state) {
     var functionName = "addTargetWithActionForControlEvents";
-    var template = "host." + functionName + "({value});";
+    var template = "{varName}." + functionName + "({value});";
     return template;
 }
 
