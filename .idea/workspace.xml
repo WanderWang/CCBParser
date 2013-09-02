@@ -14,8 +14,8 @@
     <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/extensions/CCBReader/CCNodeLoader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377847345698" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378115462912" ignored="false" />
     <file path="/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378115458793" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/hero/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378127279345" ignored="false" />
-    <file path="/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378122134596" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/hero/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135662184" ignored="false" />
+    <file path="/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135219721" ignored="false" />
     <file path="/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117764741" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117764741" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/extensions/GUI/CCControlExtension/CCControlButton.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377888397786" ignored="false" />
@@ -41,10 +41,10 @@
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/embattle/HeroEmbattleLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378116259031" ignored="false" />
     <file path="/HeroEmbattleLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378116258788" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/model/HeroCollection.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117713442" ignored="false" />
-    <file path="/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378122872687" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378123190382" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/cocos2d/label_nodes/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378125718883" ignored="false" />
-    <file path="/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378124325023" ignored="false" />
+    <file path="/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378134217439" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135778829" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/cocos2d/label_nodes/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135536511" ignored="false" />
+    <file path="/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135289002" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <file leaf-file-name="ccbparser.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ccbparser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="6" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.6616541">
+            <state line="12" column="35" selection-start="363" selection-end="363" vertical-scroll-proportion="0.2706767">
               <folding />
             </state>
           </provider>
@@ -459,7 +459,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ccbparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.6616541">
+        <state line="12" column="35" selection-start="363" selection-end="363" vertical-scroll-proportion="0.2706767">
           <folding />
         </state>
       </provider>
