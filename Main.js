@@ -7,11 +7,25 @@
  */
 
 var plist = require('plist');
-var plist = plist.parseFileSync('SelectHeroItemLayer.ccb');
+
+var dir = "/Users/apple/Sites/sanguo/Game/res/ui";
+var plist = plist.parseFileSync(dir + '/HeroAttributeInfoLayer.ccb');
 //var plist = plist.parseFileSync('LoginLayer.ccb');
 
 var ccbparser = require("./ccbparser");
 
+//var fileExtension = require("../JavaScriptCodeAnalytics/FileExtension.js");
+//fileExtension.run(dir,function(path){
+//
+//    console.log (path);
+////    ccbparser.getResource(path);
+//
+//});
+
+
+
+
+//return;
 var child = plist.nodeGraph;//.children[0];
 var result = ccbparser.parseNode(child);
 var jsController = child.jsController;

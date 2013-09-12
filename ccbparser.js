@@ -266,4 +266,32 @@ ccb.parser.ccControl.codeBlock = function (obj, param, state) {
 }
 
 
+
+
+
+
+
+ccb.getResourceString = function(path){
+    var plist = require('plist');
+    var config = plist.parseFileSync(path);
+    var nodeConfig = plist.nodeGraph;
+    console.log (config);
+}
+
+ccb.getCCBData = function(path){
+    var plist = require('plist');
+    var config = plist.parseFileSync(path);
+    return config;
+}
+
+ccb.loopNode = function(node,callback){
+    callback(node);
+    node.children.forEach(function (childObj) {
+        ccb.loopNode(childObj, callback);
+    });
+}
+
 exports.parseNode = ccb.parseNode;
+exports.getResource = ccb.getResourceString;
+exports.getCCBData = ccb.getCCBData;
+exports.loop = ccb.loopNode;

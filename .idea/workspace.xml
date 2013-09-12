@@ -4,28 +4,28 @@
     <list default="true" id="5c986dc5-83ca-4709-8434-2db9213af3c3" name="Default" comment="" />
     <ignored path="CCBParser.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378105816201" ignored="false" />
+    <file path="/Main.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378437512206" ignored="false" />
     <file path="/xmlreader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377770522529" ignored="false" />
-    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378109298103" ignored="false" />
+    <file path="/ccbparser.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378971040414" ignored="false" />
     <file path="/a.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841844926" ignored="false" />
     <file path="/a.coffee" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377841786238" ignored="false" />
-    <file path="/a.dummy" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378124108892" ignored="false" />
+    <file path="/a.dummy" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378902570317" ignored="false" />
     <file path="/CCNodeLoader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377847346019" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/extensions/CCBReader/CCNodeLoader.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377847345698" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378115462912" ignored="false" />
-    <file path="/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378115458793" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/hero/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135662184" ignored="false" />
-    <file path="/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135219721" ignored="false" />
-    <file path="/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117764741" ignored="false" />
+    <file path="/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378904767990" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/hero/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378176206285" ignored="false" />
+    <file path="/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378297294277" ignored="false" />
+    <file path="/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378709255513" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117764741" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/extensions/GUI/CCControlExtension/CCControlButton.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377888397786" ignored="false" />
     <file path="/CCControlButton.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1377888392855" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/res/ui/HomeLayer.ccb" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378105212496" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/LoadRes.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378112049178" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/jsfile.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378105212496" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/jsfile.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378175220046" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/login/LoginLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378112049178" ignored="false" />
     <file path="/LoginLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378111211750" ignored="false" />
-    <file path="/test.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378106521424" ignored="false" />
+    <file path="/test.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378296981883" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/login/QuickLoginLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117262900" ignored="false" />
     <file path="/QuickLoginLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378108765522" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/GameContainerLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378112049178" ignored="false" />
@@ -37,14 +37,47 @@
     <file path="$PROJECT_DIR$/../../html5-sanguo/Projects/proj.html5/sanguo-min.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378114698314" ignored="false" />
     <file path="/sanguo-min.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378114666550" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/model/HeroModel.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378114745990" ignored="false" />
-    <file path="/HeroModel.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378114736489" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/embattle/HeroEmbattleLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378116259031" ignored="false" />
+    <file path="/HeroModel.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721874813" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/embattle/HeroEmbattleLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378175220046" ignored="false" />
     <file path="/HeroEmbattleLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378116258788" ignored="false" />
-    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/model/HeroCollection.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378117713442" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/module/model/HeroCollection.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378175798088" ignored="false" />
     <file path="/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378134217439" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/Game/src/core/CacheLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135778829" ignored="false" />
     <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/cocos2d/label_nodes/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135536511" ignored="false" />
     <file path="/CCLabelTTF.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378135289002" ignored="false" />
+    <file path="$PROJECT_DIR$/../../html5-sanguo/HTML5/cocos2d/sprite_nodes/CCSprite.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378175220046" ignored="false" />
+    <file path="/HeroCollection.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378720432293" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/LoadRes.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378719173299" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/core/functions.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378296981882" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/Res.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378893696674" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/equip/SelectEquipItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378297577173" ignored="false" />
+    <file path="/SelectEquipItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378297393293" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/hero/SelectHeroItemLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378719796451" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/core/GameInterface.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378709262312" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/equip/EquipStrengThenPreviewLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378358146137" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/hero/HeroEquipLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378710055586" ignored="false" />
+    <file path="/HeroEquipLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378710032851" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/hero/HeroLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378905218028" ignored="false" />
+    <file path="/HeroLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378902852791" ignored="false" />
+    <file path="/LoadRes.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378711556659" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/activity/TDFight/ActivityTDFightLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378715890577" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/model/HeroModel.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721875473" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/common/HomeLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378719173299" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/model/HeroCollection.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378720435864" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/res/ui/HeroAnagenesisLayer.ccb" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378894020731" ignored="false" />
+    <file path="/HeroAnagenesisLayer.ccb" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721543238" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/hero/HeroAnagenesisLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721679034" ignored="false" />
+    <file path="/HeroAnagenesisLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721654542" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/jsfile.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378721686610" ignored="false" />
+    <file path="/CCBTest.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378871110630" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/fightclassic/FightResultLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378878662907" ignored="false" />
+    <file path="/FightResultLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378878661189" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/core/Game.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378904768543" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/activity/ActivityLoginGiftsMainLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378893696674" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/ccbi_externs.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378893696674" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Game/src/module/activity/DayCommonIcoLayer.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378893696674" ignored="false" />
+    <file path="$PROJECT_DIR$/../../sanguo/Publish/resources-html5.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378894020731" ignored="false" />
+    <file path="/FindResource.js" changelist="5c986dc5-83ca-4709-8434-2db9213af3c3" time="1378972621276" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,28 +100,25 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="26" selection-start="559" selection-end="559" vertical-scroll-proportion="-7.2">
-              <folding>
-                <element signature="e#0#156#0" expanded="false" />
-                <marker date="1378113652000" expanded="true" signature="387:622" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ccbparser.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ccbparser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="35" selection-start="363" selection-end="363" vertical-scroll-proportion="0.2706767">
+            <state line="11" column="57" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectHeroItemLayer.ccb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SelectHeroItemLayer.ccb">
+      <file leaf-file-name="CCBTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CCBTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1816" column="0" selection-start="41002" selection-end="41002" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="555" selection-end="557" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindResource.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FindResource.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.325">
               <folding />
             </state>
           </provider>
@@ -97,7 +127,16 @@
       <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="32" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+            <state line="27" column="14" selection-start="790" selection-end="812" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ccbparser.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ccbparser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="296" column="27" selection-start="8793" selection-end="8793" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,18 +153,20 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/node_modules/xmlreader/xmlreader.js" />
+        <option value="$PROJECT_DIR$/SelectHeroItemLayer.ccb" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/Main.js" />
-        <option value="$PROJECT_DIR$/SelectHeroItemLayer.ccb" />
         <option value="$PROJECT_DIR$/ccbparser.js" />
+        <option value="$PROJECT_DIR$/CCBTest.js" />
+        <option value="$PROJECT_DIR$/FindResource.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="y" value="25" />
+    <option name="x" value="28" />
+    <option name="y" value="22" />
     <option name="width" value="1377" />
-    <option name="height" value="813" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -227,6 +268,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,18 +289,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sanguo" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../html5-sanguo" />
-    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -318,13 +360,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="25" width="1377" height="813" extended-state="0" />
-    <editor active="true" />
+    <frame x="28" y="22" width="1377" height="746" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963072" sideWeight="0.6705036" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963072" sideWeight="0.6705036" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -371,7 +413,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -398,54 +440,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/ccbparser.js</url>
-          <line>56</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#156#0" expanded="false" />
-            <marker date="1378113652000" expanded="true" signature="387:622" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ccbparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="291" column="25" selection-start="8349" selection-end="8350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginLayer.ccb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="26" selection-start="5428" selection-end="5428" vertical-scroll-proportion="-14.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="559" selection-end="559" vertical-scroll-proportion="-7.2">
-          <folding>
-            <element signature="e#0#156#0" expanded="false" />
-            <marker date="1378113652000" expanded="true" signature="387:622" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelectHeroItemLayer.ccb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1816" column="0" selection-start="41002" selection-end="41002" vertical-scroll-proportion="0.0">
+        <state line="108" column="40" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -457,9 +472,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ccbparser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="363" selection-end="363" vertical-scroll-proportion="0.2706767">
+        <state line="221" column="79" selection-start="6536" selection-end="6536" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ccbparser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="291" column="25" selection-start="8349" selection-end="8350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SelectHeroItemLayer.ccb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1816" column="0" selection-start="41002" selection-end="41002" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="14" selection-start="790" selection-end="812" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginLayer.ccb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="26" selection-start="5428" selection-end="5428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="57" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CCBTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="555" selection-end="557" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ccbparser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="296" column="27" selection-start="8793" selection-end="8793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindResource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.325">
           <folding />
         </state>
       </provider>
