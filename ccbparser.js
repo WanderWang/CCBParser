@@ -291,7 +291,17 @@ ccb.loopNode = function(node,callback){
     });
 }
 
+ccb.getNodeProperty = function(node,property){
+    for (var key in node.properties){
+        if (node.properties[key].name == property){
+            return node.properties[key]
+        }
+    }
+    return null;
+}
+
 exports.parseNode = ccb.parseNode;
 exports.getResource = ccb.getResourceString;
 exports.getCCBData = ccb.getCCBData;
 exports.loop = ccb.loopNode;
+exports.getNodeProperty = ccb.getNodeProperty;
