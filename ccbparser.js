@@ -291,6 +291,17 @@ ccb.loopNode = function(node,callback){
     });
 }
 
+
+
+ccb.loopNodeSync = function(node){
+    var result = arguments[1] || [];
+    result.push(node);
+    node.children.forEach(function (childObj) {
+        ccb.loopNodeSync(childObj, result);
+    });
+    return result;
+}
+
 ccb.getNodeProperty = function(node,property){
     for (var key in node.properties){
         if (node.properties[key].name == property){
@@ -305,3 +316,4 @@ exports.getResource = ccb.getResourceString;
 exports.getCCBData = ccb.getCCBData;
 exports.loop = ccb.loopNode;
 exports.getNodeProperty = ccb.getNodeProperty;
+exports.loopNodeSync = ccb.loopNodeSync;
