@@ -123,7 +123,7 @@ var generateHeaderTemplateMethod = function (fileName,nodeList){
 
 
     var privateList = nodeList.map(function(item){
-        return  "{nodeType}{varName}"
+        return  "{nodeType}{varName};"
             .replace("{nodeType}",item.baseClass + " *")
             .replace("{varName}",generateCppVariable(item));
     });
@@ -156,10 +156,12 @@ var generateHeaderText = function(fileName,nodeList){
         .replace(/{ClassName}/gi,fileName)
 }
 
+var fileName = process.argv[2];
+
 var ccbParser = require("./ccbparser.js");
-var ccbConfig = ccbParser.getCCBData("./SelectHeroItemLayer.ccb");
+var ccbConfig = ccbParser.getCCBData(fileName);
 var nodeList = ccbParser.loopNodeSync(ccbConfig.nodeGraph);
-//console.log (generateGlueMethod("LoginLayer",["m_pHeroSkinNode","m_pEmbattleBtn"]));
-console.log (generateCppText("LoginLayer",nodeList));
 console.log (generateHeaderText("LoginLayer",nodeList));
+console.log ("=======================================")
+console.log (generateCppText("LoginLayer",nodeList));
 
